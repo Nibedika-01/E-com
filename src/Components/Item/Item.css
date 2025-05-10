@@ -1,0 +1,21 @@
+.item{
+    width: 270px;
+    margin-top: 10px;
+}
+
+.item p{
+    margin: 6px 0;
+}
+
+.itemPrice{
+    gap: 10px;
+    color: #373737;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.item:hover{
+    transform: scale(1.05);
+    transition: 0.8s;
+    cursor: pointer;
+}

@@ -1,0 +1,64 @@
+.productDisplay{
+    display: flex;
+    margin: 0px 170px;
+}
+
+.displayLeft{
+    display: flex;
+    gap: 5px;
+}
+
+.displayImgList{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.displayImgList img{
+    height: 150px;
+}
+
+.displayMainImg{
+    width: 420px;
+    height: 460px;
+}
+
+.displayRight{
+    margin: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.displayRight h1{
+    text-transform: capitalize;
+    color: #8E1616;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.displayRight p{
+    color: #818181;
+    font-size: 22px;
+}
+
+.displayRight span{
+    font-weight: 500;
+    color: black;
+}
+.displayRight button{
+    background: #ff4141;
+    padding: 10px 30px;
+    width: 150px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    margin-bottom:40px ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.displayRight button:hover{
+    background-color: #db3c3c;
+}
