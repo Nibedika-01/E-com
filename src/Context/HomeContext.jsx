@@ -15,14 +15,30 @@ const HomeContextProvider = (props) => {
 
     const [cartItems, setCartItems] = useState(getDefaultCart());
     
-    const addToCart = (itemId) =>{
-        setCartItems((prev)=>({...prev, [itemId]:(prev[itemId])+1}))
-        console.log(cartItems);
-    }
+    const addToCart = (itemId) => {
+    setCartItems((prev) => {
+        // Get current quantity or default to 0 if it doesn't exist
+        const currentQuantity = prev[itemId] || 0;
+        // Create new cart with updated quantity
+        return {
+            ...prev,
+            [itemId]: currentQuantity + 1
+        };
+    });
+};
     
-    const removeFromCart = () =>{
-        setCartItems((prev)=>({...prev, [itemId]:prev[itemId]-1}))
-    }
+    const removeFromCart = (itemId) => {
+    setCartItems((prev) => {
+        // Get current quantity or default to 0 if it doesn't exist
+        const currentQuantity = prev[itemId] || 0;
+        
+        // Create new cart with updated quantity
+        return {
+            ...prev,
+            [itemId]: currentQuantity - 1
+        };
+    });
+};
     
     
     const contextValue = {allData, cartItems, addToCart, removeFromCart};
