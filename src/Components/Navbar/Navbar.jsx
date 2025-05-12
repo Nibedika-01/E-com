@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import './Navbar.css'
 import { assets } from "../assets/assets";
 import { Link } from "react-router-dom";
+import { HomeContext } from "../../Context/HomeContext";
 
 const Navbar = () => {
 
-
     const [menu, setMenu] = useState("home");
+
+    const {getTotalCartItems} = useContext(HomeContext)
 
 
     return (
@@ -28,7 +30,7 @@ const Navbar = () => {
                 <Link to='/login'><button>Login</button></Link>
                 <Link to='/cart'><img src={assets.cart_icon} alt="" /></Link>
                 <div className="navCartCount">
-                    0
+                    {getTotalCartItems()}
                 </div>
             </div>
         </div>
