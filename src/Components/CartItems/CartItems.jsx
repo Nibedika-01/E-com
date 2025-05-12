@@ -10,7 +10,7 @@ const CartItems = () => {
 
     const { getTotalCartAmount, allData, cartItems, removeFromCart } = useContext(HomeContext);
 
-    const shippingFee = location.trim().toLowerCase() === "hetauda" ? 0 : 150;
+    const shippingFee = location.trim().toLowerCase() === "hetauda" || location === "" ? 0 : 150;
     const totalAmount = getTotalCartAmount() + shippingFee;
 
     return (
@@ -50,7 +50,6 @@ const CartItems = () => {
                     value={tempLocation}
                     onChange={(e) => setTempLocation(e.target.value)}
                 />
-
                 <button onClick={() => setLocation(tempLocation)}>Done</button>
             </div>
             <div className="cartItemsDown">
@@ -64,7 +63,7 @@ const CartItems = () => {
                         <hr />
                         <div className="cartItemsTotalItems">
                             <p>Shipping Fee</p>
-                            <p>{shippingFee === 0 ? "Free" : "Rs."+shippingFee}</p>
+                            <p>{shippingFee === 0 ? "Rs. 0" : "Rs." + shippingFee}</p>
                         </div>
                         <hr />
                         <div className="cartItemsTotalItems">

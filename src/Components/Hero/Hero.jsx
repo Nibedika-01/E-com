@@ -4,6 +4,12 @@ import { assets } from '../assets/assets'
 import NewCollections from '../NewCollections/NewCollections'
 
 const Hero = () => {
+
+  const gotoNewCollections = () => {
+    const section = document.getElementById("targetSection");
+    section?.scrollIntoView({behavior: "smooth" });
+  }
+
   return (
     <div className='hero'>
       <div className="heroLeft">
@@ -18,11 +24,11 @@ const Hero = () => {
         </div>
         <div className="heroLatestBtn">
             <div>Latest Collection</div>
-            <img src={assets.back_icon} alt="" />
+            <img onClick={gotoNewCollections} src={assets.back_icon} alt="" />
         </div>
       </div>
       <div className="heroRight">
-        <img src={assets.hero_img} alt="" />
+        <img  src={assets.hero_img} alt="" />
       </div>
     </div>
   )

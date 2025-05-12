@@ -28,6 +28,7 @@ const Navbar = () => {
 
             <div className="navLoginCart">
                 <Link to='/login'><button>Login</button></Link>
+                <img src={assets.search_icon} alt="" />
                 <Link to='/cart'><img src={assets.cart_icon} alt="" /></Link>
                 <div className="navCartCount">
                     {getTotalCartItems()}

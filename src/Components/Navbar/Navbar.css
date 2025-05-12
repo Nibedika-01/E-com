@@ -54,7 +54,7 @@
 .navLoginCart{
     display: flex;
     align-items: center;
-    gap: 45px;
+    gap: 35px;
 }
 
 .navLoginCart button{
@@ -75,7 +75,11 @@
 }
 
 .navLoginCart img{
-    width: 40px;
+    width: 30px;
+}
+
+.navLoginCart img:hover{
+    cursor: pointer;
 }
 
 .navCartCount{
@@ -85,7 +89,7 @@
     justify-content: center;
     align-items: center;
     margin-top: -35px;
-    margin-left: -55px;
+    margin-left: -45px;
     border-radius: 11px;
     font-size: 14px;
     background: red;
